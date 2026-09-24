@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "API (debug)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/api/dist/main.js",
+      "preLaunchTask": "build-api",
+      "postDebugTask": "watch-api"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "API stack",
+      "configurations": ["API (debug)"]
+    }
+  ]
+}

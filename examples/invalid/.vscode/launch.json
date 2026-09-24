@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "UI (debug)",
+      "type": "node",
+      "request": "launch",
+      "preLaunchTask": "compile-web"
+    }
+  ],
+  "compounds": [
+    { "name": "Full app", "configurations": ["API (debug)", "UI (debug)"] }
+  ]
+}

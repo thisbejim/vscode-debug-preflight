@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-api",
+      "type": "shell",
+      "command": "npm run build --workspace api"
+    },
+    {
+      "label": "watch-api",
+      "type": "shell",
+      "command": "npm run watch --workspace api",
+      "isBackground": true,
+      "dependsOn": ["build-api"]
+    }
+  ]
+}
