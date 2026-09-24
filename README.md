@@ -10,13 +10,13 @@ With an actively supported Node.js LTS release (22 or newer):
 
 ```sh
 cd path/to/your/project
-npx --yes --package=github:thisbejim/vscode-debug-preflight#v0.1.0 -- vscode-debug-preflight
+npx --yes --package=github:thisbejim/vscode-debug-preflight#v0.1.1 -- vscode-debug-preflight
 ```
 
 For a multi-root workspace, pass the `.code-workspace` file:
 
 ```sh
-vscode-debug-preflight dev.code-workspace --strict
+npx --yes --package=github:thisbejim/vscode-debug-preflight#v0.1.1 -- vscode-debug-preflight dev.code-workspace --strict
 ```
 
 The checker reads JSONC, so comments and trailing commas are accepted. It never evaluates `${...}` expressions, launches a task, invokes VS Code, or changes files.
@@ -84,7 +84,7 @@ Errors produce exit code `1`. Warnings are informational and do not fail unless 
 For GitHub Actions, upload SARIF with the normal Code Scanning action, or use JSON as a small machine-readable artifact:
 
 ```yaml
-- run: npx --yes --package=github:thisbejim/vscode-debug-preflight#v0.1.0 -- vscode-debug-preflight . --strict --format sarif > vscode-debug-preflight.sarif
+- run: npx --yes --package=github:thisbejim/vscode-debug-preflight#v0.1.1 -- vscode-debug-preflight . --strict --format sarif > vscode-debug-preflight.sarif
 ```
 
 ## Local development

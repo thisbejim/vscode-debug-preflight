@@ -1,18 +1,28 @@
 {
   "name": "vscode-debug-preflight",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Check VS Code launch, compound, and task references before F5 or CI.",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thisbejim/vscode-debug-preflight.git"
   },
-  "bugs": { "url": "https://github.com/thisbejim/vscode-debug-preflight/issues" },
+  "bugs": {
+    "url": "https://github.com/thisbejim/vscode-debug-preflight/issues"
+  },
   "homepage": "https://github.com/thisbejim/vscode-debug-preflight#readme",
   "type": "module",
-  "engines": { "node": ">=22" },
-  "bin": { "vscode-debug-preflight": "dist/cli.js" },
-  "files": ["dist", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "vscode-debug-preflight": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "prepare": "node scripts/prepare.mjs",
     "clean": "node scripts/clean.mjs",
@@ -20,7 +30,9 @@
     "check": "tsc -p tsconfig.json --noEmit",
     "test": "npm run build && node --test"
   },
-  "dependencies": { "jsonc-parser": "^3.3.1" },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1"
+  },
   "devDependencies": {
     "@types/node": "^22.19.0",
     "typescript": "^5.9.3"
