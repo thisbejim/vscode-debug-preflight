@@ -14,7 +14,6 @@
   "bin": { "vscode-debug-preflight": "dist/cli.js" },
   "files": ["dist", "README.md", "LICENSE"],
   "scripts": {
-    "prepare": "npm run build",
     "clean": "node scripts/clean.mjs",
     "build": "npm run clean && tsc -p tsconfig.json",
     "check": "tsc -p tsconfig.json --noEmit",
