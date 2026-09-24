@@ -9,9 +9,8 @@ VS Code's IntelliSense and schemas catch many mistakes while editing. This small
 With an actively supported Node.js LTS release (22 or newer):
 
 ```sh
-npm install --global github:thisbejim/vscode-debug-preflight#v0.1.0
 cd path/to/your/project
-vscode-debug-preflight
+npx --yes --package=github:thisbejim/vscode-debug-preflight#v0.1.0 -- vscode-debug-preflight
 ```
 
 For a multi-root workspace, pass the `.code-workspace` file:
@@ -85,7 +84,7 @@ Errors produce exit code `1`. Warnings are informational and do not fail unless 
 For GitHub Actions, upload SARIF with the normal Code Scanning action, or use JSON as a small machine-readable artifact:
 
 ```yaml
-- run: npx --yes github:thisbejim/vscode-debug-preflight . --strict --format sarif > vscode-debug-preflight.sarif
+- run: npx --yes --package=github:thisbejim/vscode-debug-preflight#v0.1.0 -- vscode-debug-preflight . --strict --format sarif > vscode-debug-preflight.sarif
 ```
 
 ## Local development
